@@ -1,0 +1,16 @@
+
+<h2>
+  <br>
+  <%= Time.now.strftime('%m.%d.%y')%> 
+  <br>
+  <%=  %>
+</h2>
+
+<h2>
+  <% if @subjects.first %>
+  <%=  @subjects.first.name %>
+  <br> Екзамен
+  <br><%= @subjects.first.date.strftime '%A   %m.%d.%y' %> &nbsp&nbsp 12:45
+  <% end %>
+</h2>
+<p>Find me in app/views/subjects/index.html.erb</p>

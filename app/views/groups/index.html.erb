@@ -1,0 +1,15 @@
+<div style="text-align: center">
+  
+  <h1 style="font-size: 2em;margin: 1em 0;">
+    <%=link_to @course.name, root_path %>
+  </h1>
+  
+  <% @groups.each do |c| %>
+    <h1 class="ui raised segment ui huge header" style="padding: 0.75em; margin: 0em;">
+      <%= link_to subjects_path(c) do %>
+        <%= c.name %>
+      <% end %>
+    </h1>
+  <% end %>
+  
+</div>

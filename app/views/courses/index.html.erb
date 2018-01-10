@@ -1,0 +1,12 @@
+<div style="text-align: center">
+  <h1 style="font-size: 2em;margin: 1em 0;">
+    <%=link_to @faculty.name, root_path %>
+  </h1>
+  <% @courses.each do |c| %>
+    <h1 class="ui raised segment ui huge header">
+    <%= link_to groups_path(c) do %>
+      <%= c.name %>
+    <% end %>
+    </h1>
+  <% end %>
+</div>

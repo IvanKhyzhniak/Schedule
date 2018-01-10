@@ -1,0 +1,21 @@
+<div style="text-align: center;margin: 9px 0 0 0;">
+  <div class="ui centered grid">
+    <div class="eight wide computer only column sixteen wide mobile only column twelve tablet wide column">
+      <div class="ui icon input fluid">
+        <input type="text" placeholder="Знайти одразу свою группу...">
+        <i class="search link icon"></i>
+      </div>
+   </div>
+  </div>
+</div>
+
+
+<div class="ui three column grid">
+  <% @faculties.each do |f| %>
+    <div class="column" style="padding-bottom:0.5em;">
+      <%= link_to courses_path(f.id) do %>
+        <%= image_tag "#{f.name}", class: "ui centered image faculty" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
